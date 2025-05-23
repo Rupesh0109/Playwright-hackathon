@@ -99,27 +99,27 @@ test('personal-emi', async () => {
         await HomePage.navigateTo();
     });
     await test.step("Select Loan Type", async () => {
-        await HomePage.selectloantype("personalloan");
+        await HomePage.selectloantype(inputData[2].type);
     });
     await test.step("Fill in the loan amount", async () => {
-        await HomePage.fillloanamt("1000000");
+        await HomePage.fillloanamt(inputData[2].amount);
     });
     await test.step("Fill Interest Percentage", async () => {
-        await HomePage.fillinterestrate("10.5");
+        await HomePage.fillinterestrate(inputData[2].intrest);
     });
     await test.step("Fill Loan Tenure", async () => {
-        await HomePage.fillLoantenure("20");
+        await HomePage.fillLoantenure(inputData[2].tenure);
         await page.waitForLoadState("networkidle");
     });
     await test.step("Check whether sliders are visible and values are changing", async () =>{
         expect(page.locator('//div[@id="loanamountslider"]/div')).toBeVisible();
-        expect(await HomePage.returnloanamtwidth()).toBe("width: 33.3333%;");
+        expect(await HomePage.returnloanamtwidth()).toBe(inputData[2].loanamtwidth);
 
         expect(page.locator('//div[@id="loaninterestslider"]/div')).toBeVisible();
-        expect(await HomePage.returnloanintrestwidth()).toBe("width: 27.5%;");
+        expect(await HomePage.returnloanintrestwidth()).toBe(inputData[2].loanintrestwidth);
 
         expect(page.locator('//div[@id="loantermslider"]/div')).toBeVisible();
-        expect(await HomePage.returnloantermwidth()).toBe("width: 100%;");
+        expect(await HomePage.returnloantermwidth()).toBe(inputData[2].loantenurewidth);
 
         expect(await page.screenshot()).toMatchSnapshot("personal-emi.png")
 
