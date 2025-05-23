@@ -1,0 +1,29 @@
+[
+    {
+        "type": "carloan",
+        "amount": "1500000",
+        "intrest": "9.5",
+        "tenure": "1",
+        "loanamtwidth": "width: 75%;",
+        "loanintrestwidth": "width: 30%;",
+        "loantenurewidth": "width: 14.2857%;"
+    },
+    {
+        "type": "homeloan",
+        "amount": "10000000",
+        "intrest": "10.5",
+        "tenure": "20",
+        "loanamtwidth": "width: 50%;",
+        "loanintrestwidth": "width: 36.6667%;",
+        "loantenurewidth": "width: 66.6667%;"
+    },
+    {
+        "type": "personalloan",
+        "amount": "1000000",
+        "intrest": "10.5",
+        "tenure": "20",
+        "loanamtwidth": "width: 33.3333%;",
+        "loanintrestwidth": "width: 27.5%;",
+        "loantenurewidth": "width: 100%;"
+    }
+]

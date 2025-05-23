@@ -10,7 +10,10 @@ export class Home {
         this.loanTenure = page.locator('#loanterm');
         this.totalintrest = page.locator("#emitotalinterest p span")
         this.totalemi = page.locator("#emiamount p span");
-        this.slider = page.locator('//div[@id="loanamountslider"]/div')
+        this.loanamtslider = page.locator('//div[@id="loanamountslider"]/div');
+        this.loanintrestslider=page.locator('//div[@id="loaninterestslider"]/div');
+        this.loantermslider=page.locator('//div[@id="loantermslider"]/div')
+
     }
 
     async navigateTo() {
@@ -52,7 +55,13 @@ export class Home {
         const text = await this.totalemi.innerText();
         return parseInt(text.replaceAll(',', ''));
     }
-    async returnstyle() {
-        return await this.slider.getAttribute('style');
+    async returnloanamtwidth() {
+        return await this.loanamtslider.getAttribute('style');
+    }
+    async returnloanintrestwidth() {
+        return await this.loanintrestslider.getAttribute('style');
+    }
+    async returnloantermwidth(){
+        return await this.loantermslider.getAttribute('style');
     }
 }
