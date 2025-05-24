@@ -1,0 +1,4 @@
+🧮 Calculated EMI: 131525.27 | Extracted EMI: 131525
+🧮 Calculated Total Interest: 78303.21 | Extracted Total Interest: 78303
+✅ EMI data (yearly + monthly) exported and formatted to data/car-emi-data.xlsx
+131525 78303
