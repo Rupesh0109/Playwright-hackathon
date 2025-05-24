@@ -1,0 +1,4 @@
+🧮 Calculated EMI: 99837.99 | Extracted EMI: 99838
+🧮 Calculated Total Interest: 13961117.29 | Extracted Total Interest: 13961117
+99838 13961117
+✅ EMI data (yearly + monthly) exported and formatted to data/home-emi-data.xlsx

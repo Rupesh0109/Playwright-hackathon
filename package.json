@@ -2,7 +2,10 @@
   "name": "hackathon-project",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "alugen": "npx allure generate ./allure-results -o ./allure-report",
+    "aluopen": "npx allure open ./allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,7 +15,9 @@
     "@types/node": "^22.15.19"
   },
   "dependencies": {
+    "allure-playwright": "^3.2.2",
     "body-parser": "^2.2.0",
+    "exceljs": "^4.4.0",
     "express": "^5.1.0",
     "uuid": "^11.1.0"
   }
